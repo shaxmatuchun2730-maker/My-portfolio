@@ -27,14 +27,11 @@
         section { margin-bottom: 6rem; }
         h2 { font-size: 2rem; font-weight: 800; margin-bottom: 2.5rem; letter-spacing: -0.5px; display: flex; align-items: center; gap: 1rem; color: #ffffff; }
         h2::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, rgba(255,255,255,0.1), transparent); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; }
         .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; backdrop-filter: blur(20px); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); display: flex; flex-direction: column; justify-content: space-between; }
         .card:hover { transform: translateY(-6px); border-color: rgba(59, 130, 246, 0.3); box-shadow: 0 30px 60px -15px var(--primary-glow); }
-        .card.sport-card:hover { border-color: rgba(16, 185, 129, 0.4); box-shadow: 0 30px 60px -15px var(--accent-glow); }
         .card h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.75rem; color: #ffffff; }
         .card p { color: var(--text-muted); font-size: 1rem; margin-bottom: 1rem; }
-        .badge { display: inline-flex; align-items: center; padding: 0.35rem 0.85rem; border-radius: 8px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem; background: rgba(59, 130, 246, 0.1); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.15); width: fit-content; }
-        .badge.sport { background: rgba(16, 185, 129, 0.1); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.15); }
         .gpa-box { font-size: 4.5rem; font-weight: 955; background: linear-gradient(135deg, #3b82f6, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; margin-bottom: 1rem; }
         .zoomable-img { cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; }
         .zoomable-img:hover { transform: scale(1.04); box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4); }
@@ -81,68 +78,34 @@
             </div>
         </section>
 
-        <!-- 4. LANGUAGE QUALIFICATIONS SECTION -->
-        <section>
-            <h2>Language Qualifications</h2>
-            <div class="grid">
-                <div class="card">
-                    <div>
-                        <span class="badge">International</span>
-                        <h3>IELTS Academic</h3>
-                        <p>Official English proficiency test score proving upper-intermediate communication and academic skills.</p>
-                        <p style="margin-top: -0.5rem; margin-bottom: 1rem; color: #fff;"><strong>Score:</strong> Band 6.0</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <img src="IELTS.jpg" alt="IELTS Certificate" class="zoomable-img" style="width: 100%; max-height: 140px; object-fit: cover; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);" onclick="openLightbox(this.src)">
-                    </div>
-                </div>
+    </div> <!-- CLOSING CONTAINER -->
 
-                <div class="card">
-                    <div>
-                        <span class="badge">Korean Language</span>
-                        <h3>TOPIK Certificate</h3>
-                        <p>Official Test of Proficiency in Korean administered by NIIED, South Korea.</p>
-                        <p style="margin-top: -0.5rem; margin-bottom: 1rem; color: #fff;"><strong>Level:</strong> TOPIK 1</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <img src="korrys b1.jpg" alt="TOPIK Certificate" class="zoomable-img" style="width: 100%; max-height: 140px; object-fit: cover; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);" onclick="openLightbox(this.src)">
-                    </div>
-                </div>
+    <footer>
+        <p>&copy; 2026 In'omjon Ishonqulov. All Rights Reserved. Tailored for Global Korea Scholarship Application.</p>
+    </footer>
 
-                <div class="card">
-                    <div>
-                        <span class="badge">Ibrat Academy</span>
-                        <h3>English Certification</h3>
-                        <p>Completed intensive training tracking upper-intermediate CEFR level criteria.</p>
-                        <p style="margin-top: -0.5rem; margin-bottom: 1rem; color: #fff;"><strong>Level:</strong> B2 Level</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <img src="english-b2.jpg" alt="English Certificate" class="zoomable-img" style="width: 100%; max-height: 140px; object-fit: cover; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);" onclick="openLightbox(this.src)">
-                    </div>
-                </div>
+    <!-- LIGHTBOX ELEMENTS -->
+    <div id="customLightbox" style="display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(3, 7, 18, 0.95); backdrop-filter: blur(10px); align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);" onclick="closeLightbox()">
+        <img id="lightboxImg" src="" alt="Enlarged Certificate" style="max-width: 90%; max-height: 85%; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25); border: 1px solid rgba(255,255,255,0.1); transform: scale(0.95); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div style="position: absolute; top: 20px; right: 25px; color: #fff; font-size: 2rem; font-weight: 300; cursor: pointer; font-family: monospace;">&times;</div>
+    </div>
 
-                <div class="card">
-                    <div>
-                        <span class="badge">Ibrat Academy</span>
-                        <h3>Korean Certification</h3>
-                        <p>Completed verified state-backed language courses tracking intermediate competencies.</p>
-                        <p style="margin-top: -0.5rem; margin-bottom: 1rem; color: #fff;"><strong>Level:</strong> B1 Level</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <img src="korrys b1.jpg" alt="Korean Certificate" class="zoomable-img" style="width: 100%; max-height: 140px; object-fit: cover; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);" onclick="openLightbox(this.src)">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. IT & TECH PROJECTS SECTION -->
-        <section>
-            <h2>IT & Tech Projects</h2>
-            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                
-                <!-- CARD 1: 5 MILLION CODERS -->
-                <div class="card">
-                    <div>
-                        <span class="badge">Artificial Intelligence</span>
-                        <h3>5 Million Coders Program</h3>
-                        <p>Successfully completed comprehensive technological training focusing on modern AI algorithms and data logic structures.</p>
+    <script>
+        function openLightbox(src) {
+            const lightbox = document.getElementById('customLightbox');
+            const img = document.getElementById('lightboxImg');
+            img.src = src;
+            lightbox.style.display = 'flex';
+            setTimeout(() => { lightbox.style.opacity = '1'; img.style.transform = 'scale(1)'; }, 10);
+        }
+        function resolveLightbox() {}
+        function closeLightbox() {
+            const lightbox = document.getElementById('customLightbox');
+            const img = document.getElementById('lightboxImg');
+            lightbox.style.opacity = '0';
+            img.style.transform = 'scale(0.95)';
+            setTimeout(() => { lightbox.style.display = 'none'; }, 300);
+        }
+    </script>
+</body>
+</html>
