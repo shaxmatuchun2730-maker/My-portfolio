@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>In'omjon Ishonqulov | Premium Portfolio</title>
+    <title>In'omjon Ishonqulov | Academic Portfolio</title>
     <style>
         :root {
             --bg: #030712;
@@ -16,185 +16,28 @@
             --text: #f3f4f6;
             --text-muted: #9ca3af;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 40%);
-        }
-
-        header {
-            position: relative;
-            padding: 8rem 2rem 4rem 2rem;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .profile-wrapper {
-            position: relative;
-            margin-bottom: 2rem;
-        }
-
-        .profile-avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid rgba(59, 130, 246, 0.4);
-            box-shadow: 0 0 30px var(--primary-glow);
-        }
-
-        header h1 {
-            font-size: 4rem;
-            font-weight: 900;
-            letter-spacing: -2px;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #ffffff 30%, #93c5fd 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        header p {
-            font-size: 1.35rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        section {
-            margin-bottom: 6rem;
-        }
-
-        h2 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 2.5rem;
-            letter-spacing: -0.5px;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            color: #ffffff;
-        }
-
-        h2::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(to right, rgba(255,255,255,0.1), transparent);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 2.5rem;
-            backdrop-filter: blur(20px);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(59, 130, 246, 0.3);
-            box-shadow: 0 30px 60px -15px var(--primary-glow);
-        }
-
-        .card.sport-card:hover {
-            border-color: rgba(16, 185, 129, 0.4);
-            box-shadow: 0 30px 60px -15px var(--accent-glow);
-        }
-
-        .card h3 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            color: #ffffff;
-        }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 1rem;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.35rem 0.85rem;
-            border-radius: 8px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            margin-bottom: 1.5rem;
-            background: rgba(59, 130, 246, 0.1);
-            color: #60a5fa;
-            border: 1px solid rgba(59, 130, 246, 0.15);
-        }
-
-        .badge.sport {
-            background: rgba(16, 185, 129, 0.1);
-            color: #34d399;
-            border: 1px solid rgba(16, 185, 129, 0.15);
-        }
-
-        .image-placeholder {
-            width: 100%;
-            height: 200px;
-            background: rgba(255, 255, 255, 0.01);
-            border: 2px dashed rgba(255, 255, 255, 0.06);
-            border-radius: 14px;
-            margin-top: 1.75rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.15);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .gpa-box {
-            font-size: 4.5rem;
-            font-weight: 955;
-            background: linear-gradient(135deg, #3b82f6, #10b981);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1;
-            margin-bottom: 1rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 5rem 2rem;
-            border-top: 1px solid var(--border);
-            color: rgba(255, 255, 255, 0.15);
-            font-size: 0.9rem;
-            margin-top: 8rem;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; background-image: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 50%), radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 40%); }
+        header { position: relative; padding: 8rem 2rem 4rem 2rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .profile-wrapper { position: relative; margin-bottom: 2rem; }
+        .profile-avatar { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(59, 130, 246, 0.4); box-shadow: 0 0 30px var(--primary-glow); }
+        header h1 { font-size: 4rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 0.5rem; background: linear-gradient(135deg, #ffffff 30%, #93c5fd 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        header p { font-size: 1.35rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        section { margin-bottom: 6rem; }
+        h2 { font-size: 2rem; font-weight: 800; margin-bottom: 2.5rem; letter-spacing: -0.5px; display: flex; align-items: center; gap: 1rem; color: #ffffff; }
+        h2::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, rgba(255,255,255,0.1), transparent); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; }
+        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; backdrop-filter: blur(20px); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        .card:hover { transform: translateY(-6px); border-color: rgba(59, 130, 246, 0.3); box-shadow: 0 30px 60px -15px var(--primary-glow); }
+        .card.sport-card:hover { border-color: rgba(16, 185, 129, 0.4); box-shadow: 0 30px 60px -15px var(--accent-glow); }
+        .card h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.75rem; color: #ffffff; }
+        .card p { color: var(--text-muted); font-size: 1rem; }
+        .badge { display: inline-flex; align-items: center; padding: 0.35rem 0.85rem; border-radius: 8px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem; background: rgba(59, 130, 246, 0.1); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.15); }
+        .badge.sport { background: rgba(16, 185, 129, 0.1); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.15); }
+        .image-placeholder { width: 100%; height: 200px; background: rgba(255, 255, 255, 0.01); border: 2px dashed rgba(255, 255, 255, 0.06); border-radius: 14px; margin-top: 1.75rem; display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.15); font-size: 0.9rem; font-weight: 500; }
+        .gpa-box { font-size: 4.5rem; font-weight: 955; background: linear-gradient(135deg, #3b82f6, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; margin-bottom: 1rem; }
+        footer { text-align: center; padding: 5rem 2rem; border-top: 1px solid var(--border); color: rgba(255, 255, 255, 0.15); font-size: 0.9rem; margin-top: 8rem; }
     </style>
 </head>
 <body>
@@ -204,85 +47,112 @@
             <img src="avatar.jpg" alt="In'omjon Ishonqulov" class="profile-avatar" onerror="this.src='https://unsplash.com'">
         </div>
         <h1>In'omjon Ishonqulov</h1>
-        <p>Kelajakdagi IT Mutaxassisi | GKS Grant Nomzodi (2008)</p>
+        <p>Future IT Specialist | GKS Scholarship Candidate (Born 2008)</p>
     </header>
 
     <div class="container">
         
-        <!-- BIOGRAFIYA -->
+        <!-- ABOUT ME -->
         <section>
-            <h2>Men Haqimda</h2>
+            <h2>About Me</h2>
             <div class="card" style="max-width: 850px;">
                 <p style="font-size: 1.15rem; color: #cbd5e1;">
-                    Men 2008-yilda tug‘ilganman va joriy yilda maktabni to‘liq tamomladim. Kelajagimni yuqori texnologiyalar, xususan, Axborot Texnologiyalari (IT) sohasi bilan bog‘lashni maqsad qilganman. Janubiy Koreyaning nufuzli universitetlarida xalqaro GKS Granti asosida tahsil olish uchun akademik bilimlarim, yetakchilik va til ko‘nikmalarimni doimiy ravishda yuqori darajada rivojlantirib kelmoqdaman.
+                    Born in 2008, I have successfully graduated from secondary school this year with high academic merits. My absolute career goal is rooted in Information Technology (IT). I am dynamically improving my leadership qualities, academic knowledge, and language skills to pursue a Bachelor's degree in South Korea under the prestigious GKS Scholarship.
                 </p>
             </div>
         </section>
 
-        <!-- AKADEMIK TA'LIM -->
+        <!-- ACADEMIC PERFORMANCE -->
         <section>
-            <h2>Akademik Natija</h2>
+            <h2>Academic Performance</h2>
             <div class="grid">
                 <div class="card">
                     <div class="gpa-box">100%</div>
-                    <h3>A'lo Darajali O‘rta Ta’lim Shahodatnomasi</h3>
-                    <p>Maktab davridagi barcha fanlardan o‘zlashtirish ko‘rsatkichim umumiy 100% a’lo natijani tashkil etadi (Perfect GPA).</p>
-                    <div class="image-placeholder">Shahodatnoma rasmi yuklanadi</div>
+                    <h3>High School Diploma</h3>
+                    <p>Achieved a perfect academic GPA of 100% throughout the high school curriculum, graduating with excellent marks.</p>
+                    <div class="image-placeholder">Diploma Certificate Preview</div>
                 </div>
             </div>
         </section>
 
-        <!-- TIL SERTIFIKATLARI -->
+        <!-- LANGUAGE PROFICIENCY -->
         <section>
-            <h2>Til Bilish Sertifikatlari</h2>
+            <h2>Language Qualifications</h2>
             <div class="grid">
-                
                 <div class="card">
-                    <span class="badge">Xalqaro</span>
-                    <h3>IELTS Academic Certificate</h3>
-                    <p>Ingliz tilini bilish darajasini belgilovchi xalqaro sertifikat.</p>
-                    <p style="margin-top: 0.5rem; color: #fff;"><strong>Natija:</strong> Band 6.0</p>
-                    <div class="image-placeholder">IELTS sertifikat rasmi yuklanadi</div>
+                    <span class="badge">International</span>
+                    <h3>IELTS Academic</h3>
+                    <p>Official English proficiency test score proving upper-intermediate communication and academic skills.</p>
+                    <p style="margin-top: 0.5rem; color: #fff;"><strong>Score:</strong> Band 6.0</p>
+                    <div class="image-placeholder">IELTS Certificate Preview</div>
                 </div>
 
                 <div class="card">
-                    <span class="badge">Koreys Tili</span>
+                    <span class="badge">Korean Language</span>
                     <h3>TOPIK Certificate</h3>
-                    <p>Koreys tilini bilish darajasini belgilovchi rasmiy xalqaro sertifikat.</p>
-                    <p style="margin-top: 0.5rem; color: #fff;"><strong>Daraja:</strong> TOPIK 1</p>
-                    <div class="image-placeholder">TOPIK sertifikat rasmi yuklanadi</div>
+                    <p>Official Test of Proficiency in Korean administered by NIIED, South Korea.</p>
+                    <p style="margin-top: 0.5rem; color: #fff;"><strong>Level:</strong> TOPIK 1</p>
+                    <div class="image-placeholder">TOPIK Certificate Preview</div>
                 </div>
 
                 <div class="card">
                     <span class="badge">Ibrat Academy</span>
-                    <h3>English Language Certificate</h3>
-                    <p>Ibrat Academy platformasi tomonidan berilgan rasmiy ingliz tili sertifikati.</p>
-                    <p style="margin-top: 0.5rem; color: #fff;"><strong>Daraja:</strong> B2 Darajasi</p>
-                    <div class="image-placeholder">B2 ingliz tili sertifikat rasmi</div>
+                    <h3>English Language Certification</h3>
+                    <p>Completed intensive training tracking upper-intermediate CEFR level criteria.</p>
+                    <p style="margin-top: 0.5rem; color: #fff;"><strong>Level:</strong> B2 Level</p>
+                    <div class="image-placeholder">English Certificate Preview</div>
                 </div>
 
                 <div class="card">
                     <span class="badge">Ibrat Academy</span>
-                    <h3>Korean Language Certificate</h3>
-                    <p>Ibrat Academy platformasi tomonidan berilgan rasmiy koreys tili sertifikati.</p>
-                    <p style="margin-top: 0.5rem; color: #fff;"><strong>Daraja:</strong> B1 Darajasi</p>
-                    <div class="image-placeholder">B1 koreys tili sertifikat rasmi</div>
+                    <h3>Korean Language Certification</h3>
+                    <p>Completed verified state-backed language courses tracking essential intermediate competencies.</p>
+                    <p style="margin-top: 0.5rem; color: #fff;"><strong>Level:</strong> B1 Level</p>
+                    <div class="image-placeholder">Korean Certificate Preview</div>
                 </div>
-
             </div>
         </section>
 
-        <!-- IT SEKTORI -->
+        <!-- IT & TECH PROJECTS -->
         <section>
-            <h2>IT & Texnologik Loyihalar</h2>
+            <h2>IT & Tech Projects</h2>
             <div class="grid">
-
                 <div class="card">
-                    <span class="badge">Sun'iy Intellekt</span>
-                    <h3>5 Million Dasturchi Sertifikati</h3>
-                    <p>Sun'iy intellekt (AI) texnologiyalari va zamonaviy IT algoritmlari bo‘yicha kursni muvaffaqiyatli tamomlaganlik sertifikati.</p>
-                    <div class="image-placeholder">AI sertifikat rasmi yuklanadi</div>
+                    <span class="badge">Artificial Intelligence</span>
+                    <h3>5 Million Coders Program</h3>
+                    <p>Successfully completed comprehensive technological training focusing on modern AI algorithms, machine learning baselines, and data logic structures.</p>
+                    <div class="image-placeholder">AI Certificate Preview</div>
                 </div>
 
                 <div class="card">
-                    <span class="badge">Ta'lim Granti</span>
+                    <span class="badge">Education Grant</span>
+                    <h3>"2+6" Specialized Grant</h3>
+                    <p>Awarded a competitive social-educational grant certificate empowering selected young leaders to offer 6-month free language courses to regional youth communities.</p>
+                    <div class="image-placeholder">"2+6" Grant Certificate Preview</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEADERSHIP & ACTIVITIES -->
+        <section>
+            <h2>Leadership & Extracurriculars</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="badge">Youth Organization</span>
+                    <h3>Chief Community Leader</h3>
+                    <p>Elected as the Chief Leader for the local neighborhood council under the Uzbekistan Children's Organization, managing youth empowerment events and social campaigns.</p>
+                    <div class="image-placeholder">Leadership Certificate Preview</div>
+                </div>
+
+                <div class="card">
+                    <span class="badge">District Level</span>
+                    <h3>Talent Department Head</h3>
+                    <p>Appointed as the District Leader for the Talent and Innovation Guild, organizing regional development strategies and managing high-achieving student teams.</p>
+                    <div class="image-placeholder">Talent Certificate Preview</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPORTS ACHIEVEMENTS -->
+        <section>
+            <h2>Sports & Achievements</h2>
