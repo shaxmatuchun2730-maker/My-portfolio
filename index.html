@@ -27,7 +27,7 @@
         section { margin-bottom: 6rem; }
         h2 { font-size: 2rem; font-weight: 800; margin-bottom: 2.5rem; letter-spacing: -0.5px; display: flex; align-items: center; gap: 1rem; color: #ffffff; }
         h2::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, rgba(255,255,255,0.1), transparent); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
         .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; backdrop-filter: blur(20px); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); display: flex; flex-direction: column; justify-content: space-between; }
         .card:hover { transform: translateY(-6px); border-color: rgba(59, 130, 246, 0.3); box-shadow: 0 30px 60px -15px var(--primary-glow); }
         .card.sport-card:hover { border-color: rgba(16, 185, 129, 0.4); box-shadow: 0 30px 60px -15px var(--accent-glow); }
@@ -43,6 +43,7 @@
 </head>
 <body>
 
+    <!-- 1. HEADER SECTION -->
     <header>
         <div class="profile-wrapper">
             <img src="me.jpg" alt="In'omjon Ishonqulov" class="profile-avatar" onerror="this.src='avatar.jpg'">
@@ -53,7 +54,7 @@
 
     <div class="container">
         
-        <!-- ABOUT ME -->
+        <!-- 2. ABOUT ME SECTION -->
         <section>
             <h2>About Me</h2>
             <div class="card" style="max-width: 850px;">
@@ -63,7 +64,7 @@
             </div>
         </section>
 
-        <!-- ACADEMIC PERFORMANCE -->
+        <!-- 3. ACADEMIC PERFORMANCE SECTION -->
         <section>
             <h2>Academic Performance</h2>
             <div class="grid">
@@ -74,13 +75,13 @@
                         <p>Achieved a perfect academic GPA of 100% throughout the high school curriculum, graduating with excellent marks.</p>
                     </div>
                     <div style="text-align: center; margin-top: 1rem;">
-                        <img src="shahadotnoma.jpg.jpg" alt="High School Diploma" class="zoomable-img" style="width: 60%; max-width: 240px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);" onclick="openLightbox(this.src)">
+                        <img src="shahadotnoma.jpg.jpg" alt="High School Diploma" class="zoomable-img" style="width: 55%; max-width: 240px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);" onclick="openLightbox(this.src)">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- LANGUAGE PROFICIENCY -->
+        <!-- 4. LANGUAGE QUALIFICATIONS SECTION -->
         <section>
             <h2>Language Qualifications</h2>
             <div class="grid">
@@ -92,7 +93,7 @@
                         <p style="margin-top: -0.5rem; margin-bottom: 1rem; color: #fff;"><strong>Score:</strong> Band 6.0</p>
                     </div>
                     <div style="text-align: center;">
-                        <img src="ielts.jpg" alt="IELTS Certificate" class="zoomable-img" style="width: 100%; max-height: 140px; object-fit: cover; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);" onclick="openLightbox(this.src)">
+                        <img src="IELTS.jpg" alt="IELTS Certificate" class="zoomable-img" style="width: 100%; max-height: 140px; object-fit: cover; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);" onclick="openLightbox(this.src)">
                     </div>
                 </div>
 
@@ -134,14 +135,14 @@
             </div>
         </section>
 
-        <!-- IT & TECH PROJECTS -->
+        <!-- 5. IT & TECH PROJECTS SECTION -->
         <section>
             <h2>IT & Tech Projects</h2>
             <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                
+                <!-- CARD 1: 5 MILLION CODERS -->
                 <div class="card">
                     <div>
-                        <span class="badge">Sun'iy Intellekt</span>
+                        <span class="badge">Artificial Intelligence</span>
                         <h3>5 Million Coders Program</h3>
                         <p>Successfully completed comprehensive technological training focusing on modern AI algorithms and data logic structures.</p>
-                    </div>
-                    <div style="text-align: center;">
