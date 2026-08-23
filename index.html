@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In'omjon Ishonqulov | Premium Portfolio</title>
+    <style>
+        :root {
+            --bg: #030712;
+            --card-bg: rgba(17, 24, 39, 0.7);
+            --border: rgba(255, 255, 255, 0.05);
+            --primary: #3b82f6;
+            --primary-glow: rgba(59, 130, 246, 0.25);
+            --accent: #10b981;
+            --accent-glow: rgba(16, 185, 129, 0.15);
+            --text: #f3f4f6;
+            --text-muted: #9ca3af;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 40%);
+        }
+
+        header {
+            position: relative;
+            padding: 10rem 2rem 6rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            letter-spacing: -2px;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 30%, #93c5fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 1.35rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            margin-bottom: 6rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 2.5rem;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #ffffff;
+        }
+
+        h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, rgba(255,255,255,0.1), transparent);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            backdrop-filter: blur(20px);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 30px 60px -15px var(--primary-glow);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: #ffffff;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.35rem 0.85rem;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            background: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.15);
+        }
+
+        .badge.sport {
+            background: rgba(16, 185, 129, 0.1);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.15);
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.01);
+            border: 2px dashed rgba(255, 255, 255, 0.06);
+            border-radius: 14px;
+            margin-top: 1.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.15);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.4s;
+        }
+
+        .card:hover .image-placeholder {
+            border-color: rgba(59, 130, 246, 0.25);
+            color: var(--primary);
+            background: rgba(59, 130, 246, 0.02);
+        }
+
+        .gpa-box {
+            font-size: 4.5rem;
+            font-weight: 950;
+            background: linear-gradient(135deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 5rem 2rem;
+            border-top: 1px solid var(--border);
+            color: rgba(255, 255, 255, 0.15);
+            font-size: 0.9rem;
+            margin-top: 8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>In'omjon Ishonqulov</h1>
+        <p>Kelajakdagi IT Mutaxassisi | GKS Grant Nomzodi (2008)</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- BIOGRAFIYA -->
+        <section>
+            <h2>Men Haqimda</h2>
+            <div class="card" style="max-width: 850px;">
+                <p style="font-size: 1.15rem; color: #cbd5e1;">
+                    Men 2008-yilda tug‘ilganman va joriy yilda maktabni to‘liq tamomladim. Kelajagimni yuqori texnologiyalar, xususan, Axborot Texnologiyalari (IT) sohasi bilan bog‘lashni maqsad qilganman. Janubiy Koreyaning nufuzli universitetlarida xalqaro GKS Granti asosida tahsil olish uchun akademik bilimlarim, yetakchilik va til ko‘nikmalarimni doimiy ravishda yuqori darajada rivojlantirib kelmoqdaman.
+                </p>
+            </div>
+        </section>
+
+        <!-- AKADEMIK TA'LIM -->
+        <section>
+            <h2>Akademik Natija</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="gpa-box">100%</div>
+                    <h3>A'lo Darajali O‘rta Ta’lim Shahodatnomasi</h3>
+                    <p>Maktab davridagi barcha fanlardan o‘zlashtirish ko‘rsatkichim umumiy 100% a’lo natijani tashkil etadi (Perfect GPA).</p>
+                    <div class="image-placeholder">Shahodatnoma rasmi yuklanadi</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIL SERTIFIKATLARI -->
+        <section>
+            <h2>Til Bilish Sertifikatlari</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <span class="badge">Xalqaro</span>
+                    <h3>IELTS Academic Certificate</h3>
+                    <p>Ingliz tilini bilish darajasini belgilovchi xalqaro sertifikat.</p>
+                    <p style="margin-top: 0.5rem; color: #fff;"><strong>Natija:</strong> Band 6.0</p>
+                    <div class="image-placeholder">IELTS sertifikat rasmi yuklanadi</div>
+                </div>
+
+                <div class="card">
+                    <span class="badge">Koreys Tili</span>
+                    <h3>TOPIK Certificate</h3>
+                    <p>Koreys tilini bilish darajasini belgilovchi rasmiy xalqaro sertifikat.</p>
+                    <p style="margin-top: 0.5rem; color: #fff;"><strong>Daraja:</strong> TOPIK 1</p>
+                    <div class="image-placeholder">TOPIK sertifikat rasmi yuklanadi</div>
+                </div>
+
+                <div class="card">
+                    <span class="badge">Ibrat Academy</span>
+                    <h3>English Language Certificate</h3>
+                    <p>Ibrat Academy platformasi tomonidan berilgan rasmiy ingliz tili sertifikati.</p>
+                    <p style="margin-top: 0.5rem; color: #fff;"><strong>Daraja:</strong> B2 Darajasi</p>
+                    <div class="image-placeholder">B2 ingliz tili sertifikat rasmi</div>
+                </div>
+
+                <div class="card">
+                    <span class="badge">Ibrat Academy</span>
+                    <h3>Korean Language Certificate</h3>
+                    <p>Ibrat Academy platformasi tomonidan berilgan rasmiy koreys tili sertifikati.</p>
+                    <p style="margin-top: 0.5rem; color: #fff;"><strong>Daraja:</strong> B1 Darajasi</p>
+                    <div class="image-placeholder">B1 koreys tili sertifikat rasmi</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- IT VA TA'LIM LOYIHALARI -->
+        <section>
+            <h2>IT & Texnologik Loyihalar</h2>
+            <div class="grid">
+
+                <div class="card">
+                    <span class="badge">Sun'iy Intellekt</span>
+                    <h3>5 Million Dasturchi Sertifikati</h3>
+                    <p>Sun'iy intellekt (AI) texnologiyalari va zamonaviy IT algoritmlari bo‘yicha kursni muvaffaqiyatli tamomlaganlik sertifikati.</p>
+                    <div class="image-placeholder">AI sertifikat rasmi yuklanadi</div>
+                </div>
+
+                <div class="card">
+                    <span class="badge">Ta'lim Granti</span>
+                    <h3>"2+6" Loyihasi Sertifikati</h3>
+                    <p>Yosh avlod vakillariga 6 oy davomida xorijiy tillarni mutlaqo bepul va sifatli o‘rganish imkoniyatini taqdim etuvchi maxsus grant sertifikati.</p>
+                    <div class="image-placeholder">"2+6" sertifikat rasmi yuklanadi</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SARDORLIK VA YETAKCHILIK -->
+        <section>
+            <h2>Sardorlik & Etakchilik (Leadership)</h2>
+            <div class="grid">
+
+                <div class="card">
+                    <span class="badge">Bolalar Tashkiloti</span>
