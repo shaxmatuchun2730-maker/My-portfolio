@@ -28,15 +28,16 @@
         h2 { font-size: 2rem; font-weight: 800; margin-bottom: 2.5rem; letter-spacing: -0.5px; display: flex; align-items: center; gap: 1rem; color: #ffffff; }
         h2::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, rgba(255,255,255,0.1), transparent); }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; }
-        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; backdrop-filter: blur(20px); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; backdrop-filter: blur(20px); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); display: flex; flex-direction: column; justify-content: space-between; }
         .card:hover { transform: translateY(-6px); border-color: rgba(59, 130, 246, 0.3); box-shadow: 0 30px 60px -15px var(--primary-glow); }
         .card.sport-card:hover { border-color: rgba(16, 185, 129, 0.4); box-shadow: 0 30px 60px -15px var(--accent-glow); }
         .card h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.75rem; color: #ffffff; }
-        .card p { color: var(--text-muted); font-size: 1rem; }
-        .badge { display: inline-flex; align-items: center; padding: 0.35rem 0.85rem; border-radius: 8px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem; background: rgba(59, 130, 246, 0.1); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.15); }
+        .card p { color: var(--text-muted); font-size: 1rem; margin-bottom: 1rem; }
+        .badge { display: inline-flex; align-items: center; padding: 0.35rem 0.85rem; border-radius: 8px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem; background: rgba(59, 130, 246, 0.1); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.15); width: fit-content; }
         .badge.sport { background: rgba(16, 185, 129, 0.1); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.15); }
-        .image-placeholder { width: 100%; height: 200px; background: rgba(255, 255, 255, 0.01); border: 2px dashed rgba(255, 255, 255, 0.06); border-radius: 14px; margin-top: 1.75rem; display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.15); font-size: 0.9rem; font-weight: 500; }
         .gpa-box { font-size: 4.5rem; font-weight: 955; background: linear-gradient(135deg, #3b82f6, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; margin-bottom: 1rem; }
+        .zoomable-img { cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; }
+        .zoomable-img:hover { transform: scale(1.04); box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4); }
         footer { text-align: center; padding: 5rem 2rem; border-top: 1px solid var(--border); color: rgba(255, 255, 255, 0.15); font-size: 0.9rem; margin-top: 8rem; }
     </style>
 </head>
@@ -44,10 +45,10 @@
 
     <header>
         <div class="profile-wrapper">
-            <img src="avatar.jpg" alt="In'omjon Ishonqulov" class="profile-avatar" onerror="this.src='https://unsplash.com'">
+            <img src="me.jpg" alt="In'omjon Ishonqulov" class="profile-avatar" onerror="this.src='avatar.jpg'">
         </div>
         <h1>In'omjon Ishonqulov</h1>
-        <p>Future IT Specialist | GKS Scholarship Candidate </p>
+        <p>Future IT Specialist | GKS Scholarship Candidate (Born 2008)</p>
     </header>
 
     <div class="container">
@@ -56,8 +57,8 @@
         <section>
             <h2>About Me</h2>
             <div class="card" style="max-width: 850px;">
-                <p style="font-size: 1.15rem; color: #cbd5e1;">
-                    Born in 2008, I have successfully graduated from secondary school this year with high academic merits. My absolute career goal is rooted in Information Technology (IT). I am dynamically improving my leadership qualities, academic knowledge, and language skills to pursue a Bachelor's degree in South Korea under the prestigious GKS Scholarship.
+                <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 0;">
+                    Born in 2008, I have successfully graduated from secondary school with high academic merits. My absolute career goal is rooted in Information Technology (IT). I am dynamically improving my leadership qualities, academic knowledge, and language skills to pursue a Bachelor's degree in South Korea under the prestigious GKS Scholarship.
                 </p>
             </div>
         </section>
@@ -67,14 +68,14 @@
             <h2>Academic Performance</h2>
             <div class="grid">
                 <div class="card">
-                    <div class="gpa-box">100%</div>
-                    <h3>High School Diploma</h3>
-                    <p>Achieved a perfect academic GPA of 100% throughout the high school curriculum, graduating with excellent marks.</p>
-                   <div style="text-align: center; margin-top: 1.75rem;">
-    <img src="shahadotnoma.jpg.jpg" alt="High School Diploma" class="zoomable-img" style="width: 55%; max-width: 280px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: transform 0.3s, box-shadow 0.3s;" onclick="openLightbox(this.src)">
-</div>
-
-
+                    <div>
+                        <div class="gpa-box">100%</div>
+                        <h3>High School Diploma</h3>
+                        <p>Achieved a perfect academic GPA of 100% throughout the high school curriculum, graduating with excellent marks.</p>
+                    </div>
+                    <div style="text-align: center; margin-top: 1rem;">
+                        <img src="shahadotnoma.jpg.jpg" alt="High School Diploma" class="zoomable-img" style="width: 60%; max-width: 240px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);" onclick="openLightbox(this.src)">
+                    </div>
                 </div>
             </div>
         </section>
@@ -84,35 +85,51 @@
             <h2>Language Qualifications</h2>
             <div class="grid">
                 <div class="card">
-                    <span class="badge">International</span>
-                    <h3>IELTS Academic</h3>
-                    <p>Official English proficiency test score proving upper-intermediate communication and academic skills.</p>
-                    <p style="margin-top: 0.5rem; color: #fff;"><strong>Score:</strong> Band 6.0</p>
-                    <div class="image-placeholder">IELTS Certificate Preview</div>
+                    <div>
+                        <span class="badge">International</span>
+                        <h3>IELTS Academic</h3>
+                        <p>Official English proficiency test score proving upper-intermediate communication and academic skills.</p>
+                        <p style="margin-top: -0.5rem; margin-bottom: 1rem; color: #fff;"><strong>Score:</strong> Band 6.0</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="ielts.jpg" alt="IELTS Certificate" class="zoomable-img" style="width: 100%; max-height: 140px; object-fit: cover; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);" onclick="openLightbox(this.src)">
+                    </div>
                 </div>
 
                 <div class="card">
-                    <span class="badge">Korean Language</span>
-                    <h3>TOPIK Certificate</h3>
-                    <p>Official Test of Proficiency in Korean administered by NIIED, South Korea.</p>
-                    <p style="margin-top: 0.5rem; color: #fff;"><strong>Level:</strong> TOPIK 1</p>
-                    <div class="image-placeholder">TOPIK Certificate Preview</div>
+                    <div>
+                        <span class="badge">Korean Language</span>
+                        <h3>TOPIK Certificate</h3>
+                        <p>Official Test of Proficiency in Korean administered by NIIED, South Korea.</p>
+                        <p style="margin-top: -0.5rem; margin-bottom: 1rem; color: #fff;"><strong>Level:</strong> TOPIK 1</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="korrys b1.jpg" alt="TOPIK Certificate" class="zoomable-img" style="width: 100%; max-height: 140px; object-fit: cover; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);" onclick="openLightbox(this.src)">
+                    </div>
                 </div>
 
                 <div class="card">
-                    <span class="badge">Ibrat Academy</span>
-                    <h3>English Language Certification</h3>
-                    <p>Completed intensive training tracking upper-intermediate CEFR level criteria.</p>
-                    <p style="margin-top: 0.5rem; color: #fff;"><strong>Level:</strong> B2 Level</p>
-                    <div class="image-placeholder">English Certificate Preview</div>
+                    <div>
+                        <span class="badge">Ibrat Academy</span>
+                        <h3>English Certification</h3>
+                        <p>Completed intensive training tracking upper-intermediate CEFR level criteria.</p>
+                        <p style="margin-top: -0.5rem; margin-bottom: 1rem; color: #fff;"><strong>Level:</strong> B2 Level</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="english-b2.jpg" alt="English Certificate" class="zoomable-img" style="width: 100%; max-height: 140px; object-fit: cover; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);" onclick="openLightbox(this.src)">
+                    </div>
                 </div>
 
                 <div class="card">
-                    <span class="badge">Ibrat Academy</span>
-                    <h3>Korean Language Certification</h3>
-                    <p>Completed verified state-backed language courses tracking essential intermediate competencies.</p>
-                    <p style="margin-top: 0.5rem; color: #fff;"><strong>Level:</strong> B1 Level</p>
-                    <div class="image-placeholder">Korean Certificate Preview</div>
+                    <div>
+                        <span class="badge">Ibrat Academy</span>
+                        <h3>Korean Certification</h3>
+                        <p>Completed verified state-backed language courses tracking intermediate competencies.</p>
+                        <p style="margin-top: -0.5rem; margin-bottom: 1rem; color: #fff;"><strong>Level:</strong> B1 Level</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="korrys b1.jpg" alt="Korean Certificate" class="zoomable-img" style="width: 100%; max-height: 140px; object-fit: cover; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);" onclick="openLightbox(this.src)">
+                    </div>
                 </div>
             </div>
         </section>
@@ -120,152 +137,11 @@
         <!-- IT & TECH PROJECTS -->
         <section>
             <h2>IT & Tech Projects</h2>
-            <div class="grid">
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
                 <div class="card">
-                    <span class="badge">Artificial Intelligence</span>
-                    <h3>5 Million Coders Program</h3>
-                    <p>Successfully completed comprehensive technological training focusing on modern AI algorithms, machine learning baselines, and data logic structures.</p>
-                    <div class="image-placeholder">AI Certificate Preview</div>
-                </div>
-        <div class="card">
-            <span class="badge">Education Grant</span>
-            <h3>"2+6" Specialized Grant</h3>
-            <p>Awarded a competitive social-educational grant certificate empowering selected young leaders to offer 6-month free language courses to regional youth communities.</p>
-            <div class="image-placeholder">"2+6" Grant Certificate Preview</div>
-        </div>
-
-                <div class="card" style="border-color: rgba(16, 185, 129, 0.2);">
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <span class="badge">Social Media Project</span>
-                <span class="badge" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b; border-color: rgba(245, 158, 11, 0.2);">🏆 1st Place Winner (District)</span>
-            </div>
-            <h3>Anti-Drug Awareness Short Film Competition</h3>
-            <p>Served as the Director and Team Leader for a high-impact 4-minute public awareness short film targeting drug abuse prevention among youth. Led the creative team to absolute victory, securing 1st place in the district championship. The project and official award ceremony were highlighted by the District Administration's Official Press Service.</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
-                <a href="https://t.me" target="_blank" style="text-decoration: none; display: flex; align-items: center; justify-content: center; padding: 0.75rem; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 10px; color: #60a5fa; font-weight: 600; font-size: 0.9rem; gap: 0.5rem; transition: background 0.3s;">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                    Official Championship Post
-                </a>
-
-                <a href="https://t.me" target="_blank" style="text-decoration: none; display: flex; align-items: center; justify-content: center; padding: 0.75rem; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 10px; color: #34d399; font-weight: 600; font-size: 0.9rem; gap: 0.5rem; transition: background 0.3s;">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="8" r="7"></circle><polyline points="8 21 12 17 16 21"></polyline></svg>
-                    Official Award Ceremony
-                </a>
-            </div>
-
-            <div class="image-placeholder">Press Service Award Photo Preview</div>
-        </div>
-
-        </section>
-
-        <!-- LEADERSHIP & ACTIVITIES -->
-        <section>
-            <h2>Leadership & Extracurriculars</h2>
-            <div class="grid">
-                <div class="card">
-                    <span class="badge">Youth Organization</span>
-                    <h3>Chief Community Leader</h3>
-                    <p>Elected as the Chief Leader for the local neighborhood council under the Uzbekistan Children's Organization, managing youth empowerment events and social campaigns.</p>
-                    <div class="image-placeholder">Leadership Certificate Preview</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge">District Level</span>
-                    <h3>Talent Department Head</h3>
-                    <p>Appointed as the District Leader for the Talent and Innovation Guild, organizing regional development strategies and managing high-achieving student teams.</p>
-                    <div class="image-placeholder">Talent Certificate Preview</div>
-                </div>
-            </div>
-                           <!-- ZAKOVAT REPUBLIC STAGE CARD -->
-        <div class="card" style="margin-top: 2rem; border-color: rgba(59, 130, 246, 0.2);">
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <span class="badge">Intellectual Game</span>
-                <span class="badge" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b; border-color: rgba(245, 158, 11, 0.2);">🔥 Republic Stage Competitor</span>
-            </div>
-            <h3>"Zakovat" National Intellectual Tournament</h3>
-            <p>Selected as a top-tier intellect to represent the region and compete at the prestigious Republic (National) Stage of the "Zakovat" intellectual championship. Demonstrated exceptional logical reasoning, elite analytical thinking, and high-pressure team strategic decision-making among the nation's brightest minds.</p>
-            
-            <!-- Live Republic Stage Image Placeholder -->
-            <div class="image-placeholder" style="margin-top: 1.5rem;">Republic Stage Photo Preview</div>
-        </div>
-
-
-                         <!-- SPORTS ACHIEVEMENTS -->
-        <section>
-            <h2>Sports & Achievements</h2>
-            <div class="grid">
-
-                <!-- CHESS CARD - ALIGNED WITH SCHOOL LEAGUE DIPLOMA -->
-                <div class="card sport-card">
-                    <span class="badge sport">Winner / 1st Place</span>
-                    <h3>District "School League" Chess Championship</h3>
-                    <p>Secured 1st place and the absolute championship title at the district stage of the prestigious "School League" tactical chess tournament among secondary schools, demonstrating outstanding strategic thinking and critical problem-solving under pressure.</p>
-                    
-                    <!-- Zoomable Chess Images Grid (Cert + Process) -->
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.5rem; max-width: 400px; margin-left: auto; margin-right: auto;">
-                        <div style="text-align: center;">
-                            <img src="chess-cert.jpg.jpg" alt="School League Chess Diploma" class="zoomable-img" style="width: 100%; height: 120px; object-fit: cover; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: transform 0.3s;" onclick="openLightbox(this.src)">
-                            <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Official Diploma</span>
-                        </div>
-                        <div style="text-align: center;">
-                            <img src="shaxmat.jpg.jpg" alt="Chess Match Process" class="zoomable-img" style="width: 100%; height: 120px; object-fit: cover; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: transform 0.3s;" onclick="openLightbox(this.src)" onerror="this.parentNode.style.display='none';">
-                            <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Match Process</span>
-                        </div>
+                    <div>
+                        <span class="badge">Sun'iy Intellekt</span>
+                        <h3>5 Million Coders Program</h3>
+                        <p>Successfully completed comprehensive technological training focusing on modern AI algorithms and data logic structures.</p>
                     </div>
-                </div>
-
-                <!-- VOLLEYBALL CARD -->
-                <div class="card sport-card">
-                    <span class="badge sport">Winner / 1st Place</span>
-                    <h3>District Volleyball Cup</h3>
-                    <p>Led the athletic squad to absolute victory, capturing 1st place champion status through profound team synergy and tactical athletic execution.</p>
-                    
-                    <!-- Volleyball Images Grid -->
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.5rem; max-width: 400px; margin-left: auto; margin-right: auto;">
-                        <div style="text-align: center;">
-                            <div class="image-placeholder" style="height: 120px; margin-top: 0; border-radius: 10px;">Official Cert</div>
-                        </div>
-                        <div style="text-align: center;">
-                            <div class="image-placeholder" style="height: 120px; margin-top: 0; border-radius: 10px;">With Officials</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </div>
-    <footer>
-        <p>&copy; 2026 In'omjon Ishonqulov. All Rights Reserved. Tailored for Global Korea Scholarship Application.</p>
-    </footer>
-
-    <!-- SMART LIGHTBOX FOR IMAGES -->
-    <div id="customLightbox" style="display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(3, 7, 18, 0.95); backdrop-filter: blur(10px); align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);" onclick="closeLightbox()">
-        <img id="lightboxImg" src="" alt="Enlarged Certificate" style="max-width: 90%; max-height: 85%; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25); border: 1px solid rgba(255,255,255,0.1); transform: scale(0.95); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);">
-        <div style="position: absolute; top: 20px; right: 25px; color: #fff; font-size: 2rem; font-weight: 300; cursor: pointer; font-family: monospace;">&times;</div>
-    </div>
-
-    <style>
-        .zoomable-img:hover { transform: scale(1.03); box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.3); }
-    </style>
-
-    <script>
-        function openLightbox(src) {
-            const lightbox = document.getElementById('customLightbox');
-            const img = document.getElementById('lightboxImg');
-            img.src = src;
-            lightbox.style.display = 'flex';
-            setTimeout(() => {
-                lightbox.style.opacity = '1';
-                img.style.transform = 'scale(1)';
-            }, 10);
-        }
-        function closeLightbox() {
-            const lightbox = document.getElementById('customLightbox');
-            const img = document.getElementById('lightboxImg');
-            lightbox.opacity = '0';
-            img.style.transform = 'scale(0.95)';
-            setTimeout(() => { lightbox.style.display = 'none'; }, 300);
-        }
-    </script>
+                    <div style="text-align: center;">
