@@ -70,7 +70,10 @@
                     <div class="gpa-box">100%</div>
                     <h3>High School Diploma</h3>
                     <p>Achieved a perfect academic GPA of 100% throughout the high school curriculum, graduating with excellent marks.</p>
-                    <img src="shahadotnoma.jpg.jpg" alt="High School Diploma" style="width: 100%; border-radius: 14px; margin-top: 1.75rem; border: 1px solid rgba(255,255,255,0.1); display: block;">
+                   <div style="text-align: center; margin-top: 1.75rem;">
+    <img src="shahadotnoma.jpg.jpg" alt="High School Diploma" class="zoomable-img" style="width: 55%; max-width: 280px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: transform 0.3s, box-shadow 0.3s;" onclick="openLightbox(this.src)">
+</div>
+
 
                 </div>
             </div>
@@ -221,3 +224,37 @@
 
             </div>
         </section>
+    </div>
+    <footer>
+        <p>&copy; 2026 In'omjon Ishonqulov. All Rights Reserved. Tailored for Global Korea Scholarship Application.</p>
+    </footer>
+
+    <!-- SMART LIGHTBOX FOR IMAGES -->
+    <div id="customLightbox" style="display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(3, 7, 18, 0.95); backdrop-filter: blur(10px); align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);" onclick="closeLightbox()">
+        <img id="lightboxImg" src="" alt="Enlarged Certificate" style="max-width: 90%; max-height: 85%; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25); border: 1px solid rgba(255,255,255,0.1); transform: scale(0.95); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div style="position: absolute; top: 20px; right: 25px; color: #fff; font-size: 2rem; font-weight: 300; cursor: pointer; font-family: monospace;">&times;</div>
+    </div>
+
+    <style>
+        .zoomable-img:hover { transform: scale(1.03); box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.3); }
+    </style>
+
+    <script>
+        function openLightbox(src) {
+            const lightbox = document.getElementById('customLightbox');
+            const img = document.getElementById('lightboxImg');
+            img.src = src;
+            lightbox.style.display = 'flex';
+            setTimeout(() => {
+                lightbox.style.opacity = '1';
+                img.style.transform = 'scale(1)';
+            }, 10);
+        }
+        function closeLightbox() {
+            const lightbox = document.getElementById('customLightbox');
+            const img = document.getElementById('lightboxImg');
+            lightbox.opacity = '0';
+            img.style.transform = 'scale(0.95)';
+            setTimeout(() => { lightbox.style.display = 'none'; }, 300);
+        }
+    </script>
